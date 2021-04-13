@@ -1,19 +1,23 @@
 #ifndef CUTELLIPSOID_H
 #define CUTELLIPSOID_H
-#include "figurageografica.h"
+#include "figura_geometrica.h"
+#include <sculptor.h>
 
 
-class cutellipsoid : public figurageografica
+/** @brief Classe herdeira de FiguraGeometrica,
+* responsável por adicionar elipsoides em nossa escultura.
+*/
+
+class Cutellipsoid : public Figura_Geometrica
 {
 protected:
     int xcenter,ycenter,zcenter,rx,ry,rz;
-    float r,g,b,a;
 public:
-    cutellipsoid(int xcenter_,int ycenter_,int zcenter_,int rx_,int ry_,int rz_,float r_,float g_,float b_,float a_);
-    ~cutellipsoid();
-    void draw(sculptor &t);
-
+    Cutellipsoid(int xcenter_, int ycenter_, int zcenter_, int rx_, int ry_, int rz_);
+    
+    ~Cutellipsoid();
+    
+    void draw(Sculptor &t);
 };
-
 
 #endif // CUTELLIPSOID_H

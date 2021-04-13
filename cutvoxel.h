@@ -1,19 +1,22 @@
 #ifndef CUTVOXEL_H
 #define CUTVOXEL_H
-#include "figurageografica.h"
+#include "figura_geometrica.h"
+#include <sculptor.h>
+/** @brief Classe herdeira de FiguraGeometrica,
+* responsável por remover pontos em nossa escultura.
+*/
 
-
-class cutvoxel: public figurageografica
+class Cutvoxel : public Figura_Geometrica
 {
 protected:
     int x,y,z;
-    float r,g,b,a;
 
 public:
-    cutvoxel(int x_,int y_,int z_, float r_,float g_, float b_,float a_);
-    ~cutvoxel();
-
-    void draw(sculptor &t);
+    Cutvoxel(int x_, int y_, int z_);
+   
+    ~Cutvoxel();
+    
+    void draw(Sculptor &t);
 
 };
 
